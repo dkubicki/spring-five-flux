@@ -1,0 +1,20 @@
+spring:
+  data:
+    cassandra:
+      contact-points: 172.17.0.2
+      port: 9042
+      keyspace-name: "keySpaceTest"
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: flights
+    consumer.topics:
+      firts-group:
+        - flights
+        - airports
+      second-group:
+        - anotherGroup
+
+
+
+

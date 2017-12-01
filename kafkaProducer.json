@@ -1,0 +1,18 @@
+{
+    "workflows": [{
+            "workflowName": "test",
+            "workflowFilename": "kafkaWorkflow.json",
+            "instances": 4
+        }
+   ],
+    "producers": [{
+            "type": "kafka",
+            "broker.server": "localhost",
+            "broker.port": 9092,
+            "topic": "flights",
+            "flatten": false,
+            "sync": false
+    },{
+        "type":"logger"
+    }]
+}
